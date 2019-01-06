@@ -25,9 +25,9 @@
                  <label for="dTitle" class="col-sm-2 control-label">标题</label>
                  <div class="col-sm-4">
                      <select class="form-control" id="dTitle" name="dTitle">
-                         <option id="op1">1</option>
-                         <option id="op2">2</option>
-                         <option id="op3">3</option>
+                         <option id="op1"></option>
+                         <option id="op2"></option>
+                         <option id="op3"></option>
                      </select>
                  </div>
              </div>
@@ -82,9 +82,9 @@
      var y = mydate.getFullYear();
      var m = mydate.getMonth() + 1;
 
-     var text1 = y + "年" + (m-2) + "月工资";
-     var text2 = y + "年" + (m-1) + "月工资";
-     var text3 = y + "年" + m + "月工资";
+     var text1 = ( ( ((m-2)+12)%12 == 0 ? 12 : ((m-2)+12)%12 ) <= m ? y : y-1 ) + "年" + ( ((m-2)+12)%12 == 0 ? 12 : ((m-2)+12)%12 ) + "月出勤情况";
+     var text2 = ( ( ((m-1)+12)%12 == 0 ? 12 : ((m-1)+12)%12 ) <= m ? y : y-1) + "年" + ( ((m-1)+12)%12 == 0 ? 12 : ((m-1)+12)%12 ) + "月出勤情况";
+     var text3 = ( ( (m+12)%12 == 0 ? 12 : (m+12)%12 ) <= m ? y : y-1 ) + "年" + ( (m+12)%12 == 0 ? 12 : (m+12)%12 ) + "月出勤情况";
 
      $("#op1").text(text1).attr("value",text1);
      $("#op2").text(text2).attr("value",text2);

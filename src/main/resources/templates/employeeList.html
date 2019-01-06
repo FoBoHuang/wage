@@ -39,14 +39,14 @@
           <!--显示数据-->
           <tbody>
             <tr th:each="employee : ${pageInfo.list}">
-              <td th:text="${employee.id}">2</td>
-              <td th:text="${employee.eNumber}">2511150243</td>
-              <td th:text="${employee.eName}">张三</td>
-              <td th:text="${employee.eSex==0}?'男':'女'">男</td>
-              <td th:text="${employee.eTitle}">教授</td>
-              <td th:text="${employee.eIdCard}">610602199708084415</td>
-              <td th:text="${employee.eBankCard}">25111502432511150243</td>
-              <td th:text="${employee.department.dName}">a</td>
+              <td th:text="${employee.id}"></td>
+              <td th:text="${employee.eNumber}"></td>
+              <td th:text="${employee.eName}"></td>
+              <td th:text="${employee.eSex==0}?'男':'女'"></td>
+              <td th:text="${employee.eTitle}"></td>
+              <td th:text="${employee.eIdCard}"></td>
+              <td th:text="${employee.eBankCard}"></td>
+              <td th:text="${employee.department.dName}"></td>
               <td>
                 <a th:href="@{/employee/updatePage(id=${employee.id})}"><input type="button" value="修改" class="btn btn-warning"/></a>
                 <a th:href="@{/employee/delete(id=${employee.id})}"><input type="button" value="删除"onclick="javascript:return del()" class="btn btn-danger"/></a>

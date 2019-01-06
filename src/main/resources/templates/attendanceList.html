@@ -76,15 +76,15 @@
           <!--显示数据-->
           <tbody>
             <tr th:each="attendance : ${pageInfo.list}">
-              <td th:text="${attendance.id}">2</td>
-              <td th:text="${attendance.aTitle}">2</td>
-              <td th:text="${attendance.employee.eNumber}">2511150243</td>
-              <td th:text="${attendance.employee.eName}">张三</td>
-              <td th:text="${attendance.employee.department.dName}">a</td>
-              <td th:text="${attendance.aShould}">男</td>
-              <td th:text="${attendance.aReal}">教授</td>
-              <td th:text="${attendance.aAbsences}">610602199708084415</td>
-              <td th:text="${attendance.aAbsencesCause}">25111502432511150243</td>
+              <td th:text="${attendance.id}"></td>
+              <td th:text="${attendance.aTitle}"></td>
+              <td th:text="${attendance.employee.eNumber}"></td>
+              <td th:text="${attendance.employee.eName}"></td>
+              <td th:text="${attendance.employee.department.dName}"></td>
+              <td th:text="${attendance.aShould}"></td>
+              <td th:text="${attendance.aReal}"></td>
+              <td th:text="${attendance.aAbsences}"></td>
+              <td th:text="${attendance.aAbsencesCause}"></td>
               <td>
                 <a th:href="@{/attendance/updatePage(id=${attendance.id})}"><input type="button" value="修改" class="btn btn-warning"/></a>
                 <a th:href="@{/attendance/delete(id=${attendance.id})}"><input type="button" value="删除"onclick="javascript:return del()" class="btn btn-danger"/></a>
