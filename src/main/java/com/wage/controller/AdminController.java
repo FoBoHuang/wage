@@ -43,7 +43,7 @@ public class AdminController {
         }
     }
 
-    @GetMapping("/logOut")
+    @GetMapping("/logout")
     public String sinOut(HttpServletRequest request) throws Exception{
         request.getSession().removeAttribute("admin");
         return "login";
