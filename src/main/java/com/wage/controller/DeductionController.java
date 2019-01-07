@@ -74,6 +74,8 @@ public class DeductionController {
     public String add(Deduction deduction, Model model) throws Exception {
         deduction.setdRealWage(deduction.getdBasicWage()
                 + deduction.getdBonus() - deduction.getdFine() - deduction.getdTax());
+        /*设置工资情况一开始为未确认*/
+        deduction.setdState(0);
         Integer state = deductionService.insert(deduction);
         if (state == 0){
             model.addAttribute("message", "添加工资详情失败");

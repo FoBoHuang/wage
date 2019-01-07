@@ -60,7 +60,7 @@ public class AdminController {
                        @RequestParam(defaultValue = "0") Integer size, Model model) throws Exception {
         PageHelper.startPage(page, size);
         List<Admin> list = adminService.selectAll();
-        list.remove(0);
+        /*list.remove(0);*/
         for (Admin admin:list){
             Department department = departmentService.selectById(String.valueOf(admin.getType()));
             admin.setDepartment(department);
