@@ -20,6 +20,7 @@
      </div>
      <div class="container">
          <form class="form-horizontal" th:action="@{/admin/add}" method="post" enctype="multipart/form-data">
+             <!--服务器会自动根据<input>或<select>或其他标签中的name属性的属性值对应到实体类中的属性名来进行对象的封装，然后返回给后台-->
              <div class="form-group form-group-lg">
                  <label for="uname" class="col-sm-2 control-label">用户名</label>
                  <div class="col-sm-4">
