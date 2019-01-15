@@ -8,7 +8,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 //启注解事务管理
 @EnableTransactionManagement
-//扫描mapper
+//扫描mapper(通用Mapper接口包不能被扫描，否则会报错)
 @MapperScan("com.wage.dao")
 public class WageApplication {
 
